@@ -1,0 +1,36 @@
+.container{
+    width:390px;
+    margin:0 auto;
+}
+
+#board{
+    width:210px;
+    height:210px;
+    margin:30px 0;
+}
+
+.tiles {
+    float:left;
+    width:70px;
+    height:70px;
+    border:1px solid silver;
+    font-weight:bold;
+    font-size:44px;
+    line-height:70px;
+    text-align:center;
+    margin:0;
+}
+#board:after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+}
+
+#turn{
+    font-weight:bold;
+    font-size:16px;
+}
+.also{
+	font-size:18px;
+}

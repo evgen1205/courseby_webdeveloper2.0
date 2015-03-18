@@ -1,0 +1,16 @@
+.status, #new, h3{
+    display:inline-block;
+}
+
+.status{
+position:relative;
+}
+#health{
+    position:absolute;
+    left:170px;
+    top:24px;
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    display:none;
+}

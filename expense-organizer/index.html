@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Expenses</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Expense Organizer</h1>
+    <div class="col-md-4">
+    <h3>Categories</h3>
+        <ul id="categories">
+        </ul>
+        <form id="categories-form">
+            <div class="form-group">
+                <input id="category"
+                       class="form-control"
+                       type="text"
+                       placeholder="Category">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h3>Add purchase:</h3>
+        <form id="purchases-form">
+            <div class="form-group">
+                <input id="description"
+                       class="form-control"
+                       type="text"
+                       placeholder="Description">
+            </div>
+            <div class="form-group">
+                <input id="price"
+                       class="form-control "
+                       type="text"
+                       placeholder="Price">
+            </div>
+            <div class="form-group">
+                <input id="quantity"
+                       class="form-control "
+                       type="text"
+                       placeholder="Quantity">
+            </div>
+            <input type="submit" id="button" class="btn btn-primary" value="Track!"/>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h3>Purchases</h3>
+        <h4>Category: <span id="activeCategory"></span></h4>
+        <span class="no-category">You've got no categories yet</span>
+        <h4>Purchases:</h4>
+        <p class="no-purchase">You've got no purchases yet</p>
+        <table class="table table-striped">
+            <tr>
+                <td>Description</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Total cost</td>
+            </tr>
+        </table>
+        <div id="total-amount">
+        </div>
+    </div>
+</div>
+</body>
+</html>
