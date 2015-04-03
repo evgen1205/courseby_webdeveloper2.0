@@ -1,13 +1,12 @@
-.maindiv{
-    width:364px;
-    margin:0 auto;
+.container{
+    max-width:370px;
     text-align:center;
 }
 
 #hanger{
     text-align:right;
     width:260px;
-    margin:28px 0;
+    margin:0 0 10px;
     position:relative;
 }
 
@@ -15,14 +14,14 @@
     text-align:center;
     width:100px;
     position:absolute;
-    left:38%;
+    left:45%;
     top:8%;
 }
 
 #man>p{
     margin:0;
     padding:0;
-    height:16px;
+    height:14px;
 }
 
 #forword{
@@ -62,7 +61,7 @@ width:100%;
 #new input{
     width:140px;
     font-weight:bold;
-    margin-top:12px;
+    margin-top:10px;
     background-color: #cacaca;
 }
 #new input:hover{

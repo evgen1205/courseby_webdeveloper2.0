@@ -37,7 +37,7 @@ var Board = {
                 this.winCombs[i][1].markedBy == currentPlayer.symbol &&
                 this.winCombs[i][2].markedBy == currentPlayer.symbol) {
 				win = true;
-				return currentPlayer; //is it for specs?
+				return currentPlayer;
 			} else {win = false}
 		}
     }
@@ -76,11 +76,11 @@ $(document).ready(function() {
 
     function makeMove(div){
         var n = div.attr("id");
-        if (GameBoard["Space"+n].markedBy != "_"){
+        if (GameBoard[n].markedBy != "_"){
             alert("The space is marked already!");
         } else {
-            GameBoard["Space"+n].markBy(currentPlayer);
-            var x = GameBoard.freeSpaces.indexOf(GameBoard["Space"+n]);
+            GameBoard[n].markBy(currentPlayer);
+            var x = GameBoard.freeSpaces.indexOf(GameBoard[n]);
             GameBoard.freeSpaces.splice(x, 1);
             GameBoard.updateCombs();
             div.html(currentPlayer.symbol);
@@ -99,7 +99,7 @@ $(document).ready(function() {
 
     function computerMove(){
         var temp = chooseSpace().toString();
-        makeMove($("#"+temp));
+        makeMove($("#Space"+temp));
     }
 
     function chooseSpace(){ //

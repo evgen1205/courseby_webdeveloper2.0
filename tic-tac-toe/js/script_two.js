@@ -70,12 +70,12 @@ $(document).ready(function() {
 
     $(".tiles").click(function(){
         var n = $(this).attr('id');
-        if (GameBoard["Space"+n].occupied == true){
+        if (GameBoard[n].occupied == true){
           alert("The space is marked already!");
         } else {
-            GameBoard["Space"+n].markBy(currentPlayer);
-            GameBoard["Space"+n].occupied = true;
-            var x = GameBoard.freeSpaces.indexOf(GameBoard["Space"+n]);
+            GameBoard[n].markBy(currentPlayer);
+            GameBoard[n].occupied = true;
+            var x = GameBoard.freeSpaces.indexOf(GameBoard[n]);
             GameBoard.freeSpaces.splice(x, 1);
             GameBoard.updateCombs();
             $(this).html(currentPlayer.symbol);
